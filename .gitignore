@@ -13,6 +13,8 @@ test-ledger/
 /test-ledger/
 /test-ledger/*.*
 
+metaplex/
+
 
 test-ledger/accounts/49.1
 test-ledger/accounts/49.152
