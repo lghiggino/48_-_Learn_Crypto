@@ -149,6 +149,8 @@ Em primeiro lugar: vai ser necessário instalar o rust e a cli o Solana.
 
 Uma vez que o Solana esteja instalado, será necessário escolher uma rede (devnet, testnet, ou mainnet). Aqui vamos trabalhar localmente.
 
+$ solana config set --url localhost  
+
 $ solana config get
 Então aqui podemos ver as configurações da rede local.
 RPC URL é o servidor local. É equivalente à entrada da rede.
@@ -170,13 +172,13 @@ Vai gerar o smart contract compilado, e um comando para fazermos o deploy do pro
 $ solana program deploy /home/lghiggino/Development/03-ProjetosPessoais/48_-_Learn_Crypto/example-helloworld/dist/program/helloworld.so
 Quando realizamos o deploy ele gera um programId que é a conta na rede solana onde o programa reside.
 
+Na rede solana, o elemento básico é uma conta. Diferentemente da rede Ethereum, aqui nada existe sem uma conta. Então quando fazemos o deploy do contrato a rede se encarrega de colocá-lo dentro de uma conta. Os dados que estão sendo gravados na blockchain 'vivem' dentro da conta. E quando queremos salvar alguma informação na blockchain, não a colocamos arbitrariamente na rede, mas sim numa conta. Essas contas gerem o dinheiro e esses contratos pagam taxas de execução.
+
 $ npm run start
 Roda o 'front' JS dessa aplicação na CLI
 
 
 A gente vai dar uma olhada rápida no contrato do Rust.
-
-Na rede solana, o elemento básico é uma conta. Diferentemente da rede Ethereum, aqui nada existe sem uma conta. Então quando fazemos o deploy do contrato a rede se encarrega de colocá-lo dentro de uma conta. Os dados que estão sendo gravados na blockchain 'vivem' dentro da conta. E quando queremos salvar alguma informação na blockchain, não a colocamos arbitrariamente na rede, mas sim numa conta. Essas contas gerem o dinheiro e esses contratos pagam taxas de execução.
 
 == LIB.RS 
 Então o Smart Contract
@@ -213,11 +215,31 @@ linha89: estabilishConnection
 Vamos pegar os dados do RPC, da conexão
 
 linha99: estabilishPayer
-Vai pegar uma conta para pagar pela transação, calcular o valor da taxa e confirmar o débito.
+Vai pegar uma conta para pagar pela transação.
+Nesse exemplo ele vai preferir usar uma conta nesse disposito, senão ele gera um novo par de chaves. (utils linha 57)
+
+Depois ele vai calcular o valor da taxa e confirmar o débito.
+
 Se a conta não tiver o crédito necessário para realizar a transação ele pede um airdrop da taxa para fazer o pagamento. Isso só funciona nessa rede de teste. Em prod teria que dar um throw aqui.
 
 
 linha136: checkProgram
+depois de compilarmos o programa e fazermos o deploy, essa função vai checar se está tudo correto.
+linha149: const programInfo 
+Essa chamada vai achar a conta na blockchain onde o programa reside.
+linha 164: gera uma seed para criar uma nova conta
+linha 172: checa se há a conta existente com essa seed, e se não, gera uma conta e realiza a criação da conta.
+
+linha 201: sayHello
+Aqui a gente vai enviar a instrução da transação para a conta que receberá o incremento que é a única instrução que o programa executa lá no Rust.
+linha 206: aqui em data a gente não está enviando nada de fato, mas se quiséssemos seria aqui que trabalhariamos com os dados.
+
+linha 218: reportGreetings
+Aqui a gente vai pegar os dados da conta para a qual enviamos a transação, deserializar usando o Schema dos dados, e logar o valor do counter.
+
+O tipo Struct no Rust é análogo à classe GreetingAccount no front (linha 59). fields é uma necessidade do borsh, e se tivéssemos mais campos aqui, eles estariam dentro do objeto do fields no constructor.
+
+O GreetingSchema é uma maneira de mapear esses campos de acordo com o tipo que está no rust.
 
 
 
@@ -382,82 +404,7 @@ startups
 
 
 
-
-
-
-
-
-
-
-
-https://github.com/project-serum/serum-ts/tree/master/packages/serum
-
-conecta na rede (dev, hml, main)
-
-cada book de oferta tem um par (SOL/USDT, por exemplo)
-Carrega o mercado
-Carrega as ordens de oferta (bids, asks)
-
-
-
-========== conceito do que é onChain e o que é offChain
-onChain é tudo que roda via smartContract. 
-
-offChain é como se fosse o front, não roda na blockChain.  
-
-backend: lugar ideal para se guardar informações que não deveriam ficar na blockChain, nem no front. Por exemplo: ordens de stop
-
-
-
-=========== Wallet - jogo do facewall
-front: facewall
-quando acerta ela manda uma instrução para o backend no heroku - envia a chave publica
-
-no backend fica a chave privada, detentora das coins e SOL
-
-e cria-se uma transação para transferir uma coin da conta privada para publica
-
-
-
-=========== Gas (fee/taxa)
-
-
-
-
-=========== Tipos de validação (proof of work, proof of stake, proof of history)
-
-
-
-
-========== O que implica a rede ser lenta?
-Alta probalidade de ter front-runners
-
-
-
-
-
-
-========== Na blockchain existe algo similar à MarketPlace
-Eu, e outros vendedores estamos vendendo os produtos X, Y, Z.
-
-SKU: token
-preço
-
-
-o mercado se define entre vendedores e compradores, em que os asks são so vendedores, e os bids: compradores.
-
-
-========== DAOs - Organizações descentralizadas
-governança, accountability e representatividade individual
-distribuiçao de lucros e dividendos
-decisões empresariais
-startups
-
-
-
-
-
-
+CONTINUAR EM 01:27:22
 
 
 
