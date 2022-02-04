@@ -26,6 +26,9 @@ cartesi depende de outra rede para rodar
 
 ==== Antes de qualquer coisa!!!
 
+ABRIR
+https://andersbrownworth.com/blockchain/hash
+
 Na pasta 03/48/Example-HelloWorld
 $ solana-test-validator
 $ solana logs
@@ -34,24 +37,30 @@ $ npm run start
 
 
 ==== O que é DeFi?
-Nós sempre utilizamos finanças centralizadas. No Brasil, a centralização do sistema financeiro ocorre com as autoridades monetárias federais (banco central e ministério da economia), e os bancos. Essas instituições são capazes de controlar o fluxo do dinheiro, são capazes de imprimir mais dinheiro, proibir individuos de fazer empréstimos ou até mesmo de ter uma conta bancária. Aqui no Brasil, já vimos decretos governamentais que congelaram o dinheiro nas contas bancárias, inviabilizando saques, e ultimamente resultando no primeiro impeachment da democracia pós-golpe.
+Nós sempre utilizamos finanças centralizadas. No Brasil, a centralização do sistema financeiro ocorre com as autoridades monetárias federais (banco central e ministério da economia), e os bancos. Essas instituições são capazes de controlar o fluxo do dinheiro, são capazes de imprimir mais dinheiro, proibir individuos de fazer empréstimos ou até mesmo de ter uma conta bancária. Aqui no Brasil, já vimos decretos governamentais que congelaram o dinheiro nas contas bancárias, inviabilizando saques, e ultimamente resultando num impeachment presidencial.
 
 
 ==== Comparando... DEFI vs CEFI
-A alternativa a essa estrutura é DeFi, onde não há autoridade centrais. O que temos no lugar são pedaços de código, geralmente abertos, que rodam e são capazes de tomar o lugar de estruturas tradicionais. Temos um código que é capaz de gerar uma wallet, que tem equivalencia a uma conta bancária. Temos outro código que vai gerar uma exchange descentralizada, onde essas contas podem realizar operações entre si, sem ajuda ou interferência de uma pessoa ou de uma autoridade central.
+A alternativa a essa estrutura é DeFi,
+
+CLICK
+
+Onde não há autoridade centrais. O que temos no lugar são pedaços de código, geralmente abertos,são capazes de tomar o lugar de estruturas tradicionais. Temos um código que é capaz de gerar uma wallet, que tem equivalencia a uma conta bancária. Temos outro código que vai gerar uma exchange descentralizada, onde essas contas podem realizar operações entre si, sem ajuda ou interferência de uma pessoa ou de uma autoridade central.
 
 Esses códigos muitas vezes são mais baratos e tem velocidade de processamento mais rápido em comparação com as finanças centralizadas.
 
-As finanças centralizadas são construídas sobre três pilares: criptografia, block chain e Smart Contracts.
+As finanças descentralizadas são construídas sobre três pilares: criptografia, block chain e Smart Contracts.
 
-A gente vai falar desses três componentes mais à frente, mas antes vamos falar um pouco do contexto histórico do dinheiro
+A gente vai falar desses três componentes mais à frente, mas antes vamos falar um pouco do contexto histórico que fomentou o surgimento dessa economia.
 
 ==== O que é dinheiro?
 Dinheiro é um meio de troca que permite às pessoas obterem o que desejam, sem ter que recorrer ao escambo de mercadorias.
-Assim como o ouro e pedras preciosas o dinheiro tem valor porque a maioria das pessoas acredita que ele representa algo valoroso. O dinheiro emitido no sistema de finanças centralizadas não é lastreado por comodities, mas sim pela estabilidade do governo que o emite. Dinheiro como conhecemos hoje está vinculado à uma ideia de poder central.
+O dinheiro tem valor porque a maioria das pessoas acredita que ele representa algo valoroso. Ele não tem um valor intrínseco, como por exemplo o ouro. O dinheiro emitido no sistema de finanças centralizadas não é lastreado por comodities, mas sim pela estabilidade do governo que o emite. Dinheiro como conhecemos hoje está vinculado à uma ideia de poder central.
 
 Mas...CLICK... a raiz do problema com o dinheiro tradicional reside na confiança necessária para fazê-lo funcionar. Nós precisamos acreditar que os Bancos Centrais não vão enfraquecer a moeda, mas a história nos mostra que há quebras frequentes dessa confiança.
-Além disso, precisamos acreditar que os bancos vão guardar nosso dinheiro, mas eles o emprestam em bolhas de crédito, e mantém reservas insuficientes para momentos de crise.
+Além disso, precisamos acreditar que os bancos vão guardar nosso dinheiro, mas eles o emprestam em bolhas de crédito, e mantém reservas insuficientes para momentos de crise. 
+
+CLICK
 
 ==== Histórico Crash 2008
 Apesar de já estar sendo desenvolvido a anos, o Bitcoin ganhou um impulso na sua publicação e adoção após a crise do subprime de 2008. 
@@ -65,15 +74,18 @@ O FED então realiza o bailout, criando dinheiro e distribuindo aos bancos ameri
 1. Essa grana não chega no pequeno consumidor, que além da recessão passa a ter que lidar com inflação
 2. Moedas que tinham lastro no dolar se veem desvalorizadas porque o dolar perdeu valor.
 
-Dado esse cenário de previlégio aos bancos em detrimento do consumidor temos um terreno fértil para a criação e adoção de uma alternativa ao sistema centralizado. CLICK
+Essa crise evidenciou a fragilidade do sistema bancário nos Estados Unidos, e criou um solo fértil para a adoção dessa alternativa
+CLICK
 
 ==== Os três pilares
 Então feito esse contexto histórico a gente pode começar a falar um pouco mais dessa alternativa ao sistema centralizado. 
 
 ==== O que é BlockChain
-Simplificadamente, a blockchain é uma lista crescente de logs e dados. Essa lista é composta de multiplos blocos de dados, que estão organizados em ordem cronológica e segurados por criptografia
+Simplificadamente, a blockchain é uma lista de dados. Essa lista é composta de multiplos blocos de dados, que estão organizados em ordem cronológica e segurados por criptografia.
 
-As transações nas redes blockchain ocorrem dentro de uma rede P2P distribuída globalmente (nodes). Cada computador dos nós contem uma cópia integral da rede e contribui para o funcionamento e segurança da rede. Essa estrutura descentralizada é o que faz com as blockchains sejam sem fronteiras, e resistentes à censura e à fraudes.
+No BitCoin essa lista guarda entre outros dados um livro razão que contem comandos para transferências entre os participantes, assinada pela chave privada de quem enviava o dinheiro para a chave pública de quem recebia.
+
+As transações nas redes blockchain ocorrem dentro de uma rede P2P distribuída globalmente (nodes). Cada computador dos nós contem uma cópia integral da rede e contribui para o funcionamento e segurança da rede. 
 
 ==================== IR PARA O LINK
 Aqui a gente vai ver de forma gráfica o funcionamento de uma rede.
@@ -81,14 +93,16 @@ Aqui a gente vai ver de forma gráfica o funcionamento de uma rede.
 == HASH
 No primeiro lugar existem os hashes. Imagine uma caixa preta em que não importa quais dados entram nela, do outro lado sai uma string de 64 dígitos. É isso que está acontecendo aqui. Então, nessa estrutura o hash é como se fosse uma impressão digital digital dos dados no blocos.
 
-A criptografia se dá na nossa incapacidade de descobrir o valor do hash sem colocar nada dentro do bloco.
+As duas principais características do SHA256 é que o mesmo input vai gerar sempre o mesmo output, e é impossível se reverter a função e saber o que está escrito no bloco a partir dessa string de 64 caracteres.
+
+Uma das funções da criptografia na blockchain está relacionada à geração de um hash que seja iniciado com um numero pre-determinado de zeros. Isso é o 'proof of work'. 
 
 == BLOCO
 O bloco é essa ideia do hash extendida. A parte de dados do hash foi quebrada em 3 sessões diferentes: bloco, nonce e dados
 
 O hash desse bloco começa com 4 zeros, o que é raro. E porque ele começa com esses 4 zeros, de forma arbitrária, a gente vai dizer que esse bloco está assinado.
 
-Quando digitamos algo diferente dentro do bloco, o hash muda, e como não começa com 4 zeros, esse não é mais um bloco assinado. E é aqui que o Nonce entra. O Nonce é uma maneira de mudarmos os dados do bloco, para tentarmos fazer ele ter um hash iniciado com 4 zeros novamente.
+Quando digitamos algo diferente dentro do bloco, o hash muda, e perde a assinatura. E é aqui que o Nonce entra. O Nonce é uma maneira de mudarmos os dados do bloco, para tentarmos fazer ele ter um hash iniciado com 4 zeros novamente.
 
 DIGITAR OS NUMEROS NO NONCE: 1....2....3....4....
 
@@ -117,6 +131,9 @@ E é aqui que a imutabilidade da rede é importante. Se mudarmos algum valor no 
 
 É importante notar que a rede só está gravando as transações, mas não o saldo na conta. Então não sabemos realmente se a pessoa X tem o dinheiro para pagar a transação para Y.
 
+Essa rede junta uma quantidade X de transferências e 
+e quando se tem Xmbs no bloco, minera-se o hash que vai fechar e propagar para a rede.
+
 == COINBASE
 Adicionamos mais um campo no nosso bloco, e nele estamos inventando 100 reais e dando para Anders. E no bloco 2 algumas transações ocorrem a partir da conta do Anders para outras pessoas na rede.
 
@@ -126,26 +143,26 @@ E a gente vê que se mudarmos um bloco, a rede toda precisa concordar com a muda
 
 ==================== VOLTAR PARA APRESENTAÇÃO
 
+Uma das adições que a rede Ethereum trouxe ao ecosistema foi a possibilidade de se gravar programas e estados dentro da rede. 
+
 ==== O que é Smart Contract
-Os Contratos Inteligentes surgiram na rede Ethereum e são programas que rodam na rede. São uma coleção de funções e estados que residem em algum endereço específico nessa Block Chain. São capazes de receber pagadores e recebores como parâmetros das funções, e executar transações mediante assinaturas criptografadas.
+Os Contratos Inteligentes são uma coleção de funções e estados que residem em algum endereço específico nessa Block Chain. São capazes de receber pagadores e recebores como parâmetros das funções, e executar transações mediante assinaturas criptografadas.
 
 Eles são contratos programados que permitem que duas partes estabeleçam condições de uma transação sem ter a necessidade de ter um terceiro grantidor envolvido. 
 
 Imagine...
 
-Eles funcionam no princípio "se A, então B". Então se uma condição específica é cumprida, o próprio programa realiza a operação.
-
-==== O que é Smart Contract 2 = VsCode
+==== O que é Smart Contract 2 
 Em primeiro lugar vamos falar do Solana e porque adotamos essa rede ao invés da Ethereum.
 
 - Escalabilidade: A Solana já tem capacidade de realizar 51 mil transações por segundo, mais do que a Visa realiza atualmente. A projeção é que eles sejam capazes de realizar 710 mil por segundo. É, de longe, a rede mais capaz nesse quesito.
 
 - Custo: O custo de transação na rede Ethereum tem variado entre 20 e 100 dólares, enquanto que na rede solana conseguimos realizar transações com custo menor que 5 centavos de real.
 
-- Rust: Entendemos que a adoção do Rust traz mais flexibilidade do que o uso do Solidity. A linguagem tem sido adotada por grandes empresas do mercado.
+- Rust: Entendemos que a adoção do Rust traz mais flexibilidade do que o uso do Solidity. É uma  linguagem tem sido adotada por grandes empresas do mercado.
 
-==VsCode
-Em primeiro lugar: vai ser necessário instalar o rust e a cli o Solana. 
+== VsCode
+Antes de qualquer coisa: eu já tenho instalado o rust e a cli o Solana. 
 
 Uma vez que o Solana esteja instalado, será necessário escolher uma rede (devnet, testnet, ou mainnet). Aqui vamos trabalhar localmente.
 
@@ -176,7 +193,6 @@ Na rede solana, o elemento básico é uma conta. Diferentemente da rede Ethereum
 
 $ npm run start
 Roda o 'front' JS dessa aplicação na CLI
-
 
 A gente vai dar uma olhada rápida no contrato do Rust.
 
@@ -243,16 +259,12 @@ O GreetingSchema é uma maneira de mapear esses campos de acordo com o tipo que 
 
 
 
-
-
-
-
 ==== DAPS
 Então quando temos multiplos smart contract combinados para operar em conjunto, temos a possibilidade de realizar operações mais complexas. A isso dá se o nome de DApps (Dcentralized Apps)
 
 As vantagens dos Dapps São:
 1. imutabilidade: uma vez publicado na blockchain, ninguém mais consegue alterar o que está dentro dele
-2. resistencia a fraudes: já que eles residem na rede, para fraudá-los teria que se modificar os dados de todos os blocos posteriores em 51% da rede.
+2. resistencia a fraudes: já que eles residem na rede, para fraudá-los teria que se aprovar em outras cópias da rede.
 3. transparencia: são auditáveis
 4. disponibilidade: como eles residem na rede, enquanto a rede estiver de pé, eles estarão lá.
 
@@ -261,14 +273,31 @@ As desvantagens são:
 2. escalabilidade: na maioria dos casos, o tamanho dos Dapps depende da rede onde ele reside. Quantidade de processamento.
 3. transparencia: por serem auditáveis abertamente, podem ter exploits
 
+==== DEx
+As Dexes são um marketplace peer-to-peer que permite que compras e vendas sejam de criptoativos feitas diretamente entre as contas, sem intermediação de bancos ou corretoras.
+Elas utilizam um livro de oferta público e as transações que ocorrem dentro dela são gravadas diretamente na rede. 
+
+Exchanges privadas, como a Coinbase ou Binance, criam uma carteira para o usuário quando é feito o registro da conta. E essas empresas tem acesso à sua chave privada. Ou seja, você como usuário, precisa acreditar que essas empresas estão guardando essa informação de forma segura. 
+
+Para maior segurança e controle a gente pode criar uma wallet privada no nosso próṕrio computador. Mas sempre há o risco de ser hackeado e é relativamente fácil se achar a chave privada de uma wallet. 
+
+Criar uma wallet no solana, por exemplo, é fácil assim: CLICK 
+
+É muito mais seguro você ter uma wallet privada para se segurar de coisas como essa aqui: CLICK
+
+(SE PEDIREM PRA MOSTRAR PRECISA CRIAR O DIRETORIO:
+mkdir ~/my-solana-wallet
+&
+garantir que o solana-test-validator esteja rodando)
+
 ==== DAOs
-LOGO MAKER
+É uma organização 100% autônoma, que não é governada por nenhuma pessoa mas sim por código. Esse código é baseado em Smart Contracts e permitem que as DAOs tenham ou outro modelo de governança.
 
-É uma organização 100% autônoma, que não é governada por nenhuma pessoa mas sim por código. Esse código é baseado em Smart Contracts e permitem que as DAOs substituam como as organização tradicionais funcionam. Como elas funcionam com códiog estão blindadas de interferẽncias humanas e vão operar com transparência. 
+A Maker é umas das mais conhecidas DAOs nesse universo. Ela produz dois tokens: 
 
-A Maker é umas das mais conhecidas DAOs nesse universo. Ela produz dois tokens: o DAI que é um token que tem o valor fixo em UM dolar. Esse tipo de token é chamado de StableCoin. É um token de valor estável, com lastro em dolar, ou no caso do DAI em outros cripto ativos.
+o Maker: que é um token de governança, que os detentores podem usar para votar por melhorias na plataforma. As decisões das DAOs são baseadas por votos via tokens
 
-e o Maker: que é um token de governança, que os detentores podem usar para votar por melhorias na plataforma. As decisões das DAOs são baseadas por votos via tokens
+o DAI que é um token que tem o valor fixo em UM dolar. Esse tipo de token é chamado de StableCoin. É um token de valor estável, com lastro em dolar, ou no caso do DAI em outros cripto ativos.
 
 E por falar em tokens....
 
@@ -277,9 +306,15 @@ Existem hoje em dia dois protocolos para gerar tokens nas redes: EC-20 e EC-721.
 
 EC20: gera tokens intercaláveis de mesmo valor. O que significa que se eu pagar ao Oshiro um token do tipo EC20, e ele me devolver um token do tipo EC20, nós temos a mesma coisa que antes. um real, por um real.
 
-EC721: gera os tokens não fungíveis, o que significa que eles são únicos e não-trocáveis.
+EC721: gera os tokens não fungíveis, o que significa que eles são únicos, não-intercambiáveis e não podem ser substituídos por outra coisa.
 
-==== Mintando um NFT na rede Solana
+==== Exemplos
+Mintando um NFT na rede Solana
+
+O que temos aqui!?
+
+==== Futuro e Possibilidades
+
 
 
 
@@ -404,10 +439,7 @@ startups
 
 
 
-CONTINUAR EM 01:27:22
-
-
-
+CONTINUAR VIDEO EM 01:27:22
 
 
 
