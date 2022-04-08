@@ -81,7 +81,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - hardhat, hardhat-waffle, ethereum-waffle, hardhat-ethers: eth tooling
 
 
-### Initialize the hardhat environment
+## Initialize the hardhat environment
 - npx hardhat
 -- create sample project
 -- default root
@@ -127,3 +127,39 @@ line 17: we get a reference to the contract we want to deploy
 line18 : we deploy passing the constructor text("Hello, Hardhat!")
 then await the deployment
 line22: the address we will be deploying to
+
+## Compiling the smart contract
+```
+npx hardhat compile
+```
+#### src/artifacts/contracts/Greeter.json
+the abi[] will be imported into the frontEnd.
+
+
+## Starting the local blockchain node
+```
+npx hardhat node
+```
+will create a local node and list 20 real open public accounts
+
+```
+npx hardhat run scripts/deploy.js --network localhost
+
+```
+
+
+## Installing MetaMask
+
+## Writing the frontEnd code
+
+## Deploying a live test network
+
+## Creating a Token Contract
+
+## Creating the Token front end 
+
+## ERC20 Tokens
+
+## Remix IDE
+
+## Conclusion
