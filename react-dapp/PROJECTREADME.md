@@ -142,15 +142,28 @@ npx hardhat node
 ```
 will create a local node and list 20 real open public accounts
 
+On a new terminal:
+
 ```
 npx hardhat run scripts/deploy.js --network localhost
 
 ```
+will return the chain address of the deployment, and logs on the network terminale
 
-
-## Installing MetaMask
+## Installing MetaMask and create a metamask wallet
+Change the network to localhost
+Then import the private key from account 0 into MM:
+Account #0: 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266 (10000 ETH)
+Private Key: 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 
 ## Writing the frontEnd code
+### yarn start 
+Will start the react front End application, then we can open up the src/app.js
+#### app.js
+import { useState } from 'react';
+import { ethers } from 'hardhat';
+
+
 
 ## Deploying a live test network
 
