@@ -14,6 +14,8 @@ Starting the front end:
 yarn start 
 ```
 
+continuar aqui: https://youtu.be/a0osIaAOFSE?t=1887
+
 ## Dependencies list and usage
 - ethers: will be used from the frontEnd to interact with the smart contract
 - hardhat, hardhat-waffle, ethereum-waffle, hardhat-ethers: eth tooling
@@ -100,8 +102,6 @@ Will start the react front End application, then we can open up the src/app.js
 #### app.js
 import { useState } from 'react';
 import { ethers } from 'hardhat';
-
-
 
 ## Deploying a live test network
 

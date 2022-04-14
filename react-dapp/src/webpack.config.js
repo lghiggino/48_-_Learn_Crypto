@@ -4,7 +4,8 @@
 //         fallback: {
 //             "os": false,
 //             "path": require.resolve("path-browserify"),
-//             "domain": require.resolve("domain-browser")
+//             "domain": require.resolve("domain-browser"),
+//             "console": false,
 //         },
 //     },
 // };
